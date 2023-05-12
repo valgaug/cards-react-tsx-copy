@@ -98,7 +98,7 @@ const determineGameResult = (state: GameState): GameResult => {
   if (playerResult > dealerResult) {
     return 'player_win';
   }
-  if (playerResult === 21 && playerCards === 2 && dealerCards !== 2) {
+  if (playerResult === 21 && playerCards === 2 && dealerCards !== 2) { // condition also takes into account 'BlackJack' situation
     return 'player_win';
   }
   if (dealerResult === playerResult) {
